@@ -1,0 +1,16 @@
+.container-search{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    position: relative;
+    height: 106px;
+    box-sizing: border-box;
+    width: 70%;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    margin: 0  10px;
+}
+

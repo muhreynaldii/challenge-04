@@ -1,21 +1,16 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import Navigationbar from './../Navigationbar/Navigationbar';
+import { Outlet } from 'react-router-dom';
+import Footer from './../Footer/Footer';
 
 function Layout() {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/About">About</Link>
-          </li>
-        </ul>
-        <br />
-        <Outlet />
-      </nav>
+      <Navigationbar/>
+      <div>
+          <Outlet/>
+      <Footer/>
+    </div>
     </>
   );
 }
