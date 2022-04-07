@@ -1,24 +1,52 @@
-import { Input, Button, Label } from "reactstrap";
+import { Input, Button, Label, Container, Row, Col } from "reactstrap";
 import './FormPencarian.css'
 
   function FormPencarian() {
     return (
-      <div className="container-search d-flex">
+      <>
+      <Container>
+      <div className="container-search pt-3">
       <div className="label">
-      <Label for="exampleDriver" className="text-dark">
+      <Row className="px-2">
+      <Col
+        xs="3"
+      >
+        <Label for="exampleDriver" className="text-dark">
         Tipe Driver
         </Label>
-      <Label for="exampleDriver" className="text-dark">
-        Tipe Driver
+      </Col>
+      <Col
+        xs="2"
+      >
+        <Label for="exampleDriver" className="text-dark">
+        Tanggal
         </Label>
-      <Label for="exampleDriver" className="text-dark">
-        Tipe Driver
+      </Col>
+      <Col
+        xs="3"
+      >
+        <Label for="exampleDriver" className="text-dark">
+        Waktu Jemput/Ambil
         </Label>
-      <Label for="exampleDriver" className="text-dark">
-        Tipe Driver
+      </Col>
+      <Col
+        xs={{
+          size: "4",
+        }}
+
+      >
+        <Label for="exampleDriver" className="text-dark">
+        Jumlah Penumpang (optional)
         </Label>
+      </Col>
+    </Row>
       <div className="input">
-        <Input id= "exampleDriver" bsSize="lg" type="select" className="input">
+
+      <Row className="px-2">
+      <Col
+        xs="3"
+      >
+        <Input id= "exampleDriver" bsSize="sm" type="select" className="input">
         <option>
         Dengan Sopir
         </option>
@@ -27,20 +55,43 @@ import './FormPencarian.css'
         </option>
 
         </Input>
-        <Input bsSize="lg" type="date" placeholder="Pilih Tanggal" className="input"/>
-        <Input id="exampleTime" name="time" placeholder="Pilih Waktu " type="time" bsSize="lg"
+      </Col>
+      <Col
+        xs="2"
+      >
+        <Input bsSize="sm" type="date" placeholder="Pilih Tanggal" className="input"/>
+      </Col>
+      <Col
+        xs="3"
+      >
+        <Input id="exampleTime" name="time" placeholder="Pilih Waktu " type="time" bsSize="sm"
         className="input"
         />
-        <Input id="exampleNumber" name="number" placeholder="Jumlah Penumpang"type="number" bsSize="lg"
+      </Col>
+      <Col
+        xs={{
+          size: "3",
+        }}
+      >
+        <Input id="exampleNumber" name="number" placeholder="Jumlah Penumpang"type="number" bsSize="sm"
         className="input"
         />
-        <Button color="success"className="input" size="sm" >
-          Cari       Mobil
+      </Col>
+      <Col
+        xs={{
+          size: "1",
+        }}
+      >
+        <Button color="success" size="sm" >
+          Cari Mobil
         </Button>
+      </Col>
+    </Row>
         </div>
       </div>
       </div>
-
+      </Container>
+      </>
     );
   }
 

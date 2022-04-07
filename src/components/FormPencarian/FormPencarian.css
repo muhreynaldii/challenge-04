@@ -5,12 +5,6 @@
     position: relative;
     height: 106px;
     box-sizing: border-box;
-    width: 70%;
+    width: 100%;
+    top: -40px;
 }
-
-.input{
-    display: flex;
-    align-items: center;
-    margin: 0  10px;
-}
-
