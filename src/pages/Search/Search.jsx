@@ -3,13 +3,11 @@ import { Container } from "reactstrap";
 import CardCars from "../../components/Card/CardCars";
 import FormPencarian from "./../../components/FormPencarian/FormPencarian";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 
 function Search() {
   const [dataList, setDataList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const params = useParams();
   const getData = async () => {
     try {
       const res = await axios.get(
@@ -36,15 +34,17 @@ function Search() {
         {isLoading ? (
           <div>Loading...</div>
         ) : (
-          <div>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
             {dataList?.map((item) => {
               return (
-                <CardCars
-                  id={item?.id}
-                  name={item?.name}
-                  image={item?.image}
-                  price={item?.price}
-                />
+                <div className="m-2">
+                  <CardCars
+                    id={item?.id}
+                    name={item?.name}
+                    image={item?.image}
+                    price={item?.price}
+                  />
+                </div>
               );
             })}
           </div>
