@@ -29,17 +29,17 @@ function Navigationbar() {
             </NavLink>
             </NavItem>
             <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
+            <NavLink href="#">
                 Why US
             </NavLink>
             </NavItem>
             <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
+            <NavLink href="#">
                 Testimonials
             </NavLink>
             </NavItem>
             <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
+            <NavLink href="#">
                 FAQ
             </NavLink>
             </NavItem>

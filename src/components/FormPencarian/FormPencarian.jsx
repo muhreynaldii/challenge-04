@@ -1,7 +1,13 @@
 import { Input, Button, Label, Container, Row, Col } from "reactstrap";
 import './FormPencarian.css'
+import { useNavigate } from 'react-router-dom';
 
   function FormPencarian() {
+    const navigate = useNavigate();
+    const handleclick = () => {
+      navigate('/search')
+    }
+
     return (
       <>
       <Container>
@@ -40,8 +46,6 @@ import './FormPencarian.css'
         </Label>
       </Col>
     </Row>
-      <div className="input">
-
       <Row className="px-2">
       <Col
         xs="3"
@@ -79,16 +83,15 @@ import './FormPencarian.css'
       </Col>
       <Col
         xs={{
-          size: "1",
+          size: "1"
         }}
       >
-        <Button color="success" size="sm" >
+        <Button color="success" size="sm" onClick={handleclick}>
           Cari Mobil
         </Button>
       </Col>
     </Row>
         </div>
-      </div>
       </div>
       </Container>
       </>
